@@ -1,4 +1,4 @@
-/* NAYAE WEBSITE — shared styles */
+/* NAYAE WEBSITE — shared styles*/
 :root {
   --navy: #10283e;
   --navy-2: #173b50;
@@ -162,3 +162,17 @@ p { color: var(--muted); }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-grid > :first-child { grid-column: auto; }
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+

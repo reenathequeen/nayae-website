@@ -18,8 +18,15 @@ if (header) {
     <header class="site-header">
       <div class="navbar">
         <a href="index.html" class="logo" aria-label="Nayae home">
-          NAYAE
-          <span>CONSULTING &amp; ENERGY PROJECTS LTD.</span>
+          <img
+            src = "images/nayae-logo.png"
+            alt = "Nayae security logo"
+            class = "logo-image"
+          >    
+          <span>
+            NAYAE
+              <span>CONSULTING &amp; ENERGY PROJECTS LTD.</span>
+          </span>
         </a>
         <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
         <nav class="nav-links" aria-label="Main navigation">
@@ -46,7 +53,7 @@ if (footer) {
         <div class="footer-grid">
           <div>
             <a class="footer-brand" href="index.html">NAYAE<span>CONSULTING &amp; ENERGY PROJECTS LTD.</span></a>
-            <p>Intelligent security and critical infrastructure protection. Replace this text with Nayae's approved company description before launch.</p>
+            <p>Intelligent security and critical infrastructure protection.</p>
           </div>
           <div>
             <h3>Explore</h3>
@@ -65,7 +72,8 @@ if (footer) {
               <a href="demo.html">Request a Demo</a>
               <a href="privacy.html">Privacy Policy</a>
             </div>
-            <p class="small-note">Add official email and telephone details before launch.</p>
+            <p class="small-note">Email : nayaeconsult@gmail.com
+            / Telephone : +1 905-462-7349</p>
           </div>
         </div>
         <div class="footer-bottom">© <span id="year"></span> Nayae Consulting &amp; Energy Projects Ltd. All rights reserved.</div>
@@ -88,7 +96,7 @@ function setupDemoForm(formId, statusId) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
-    status.textContent = "The form looks valid, but it is not connected to an email service yet. Please connect an approved form service before launch.";
+    status.textContent = "";
     status.style.color = "#8a5b00";
   });
 }
