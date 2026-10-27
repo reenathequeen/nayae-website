@@ -26,18 +26,15 @@ if (header) {
     <header class="site-header">
       <div class="navbar">
 
-        <a href="index.html" class="logo" aria-label="Nayae home">
-          <img
-            src="images/nayaelogo.png"
-            alt="Nayae logo"
-            class="logo-image"
-          >
+         <a href="index.html" class="logo" aria-label="Nayae home">
+  <span class="logo-symbol">N</span>
 
-          <span>
-            NAYAE
-            <span>CONSULTING & ENERGY PROJECTS LTD.</span>
-          </span>
-        </a>
+  <span class="logo-text">
+    <strong>NAYAE</strong>
+    <span>CONSULTING & ENERGY</span>
+    <span>PROJECTS LTD.</span>
+  </span>
+</a>
 
         <button
           class="menu-toggle"
