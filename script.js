@@ -28,7 +28,7 @@ if (header) {
 
         <a href="index.html" class="logo" aria-label="Nayae home">
           <img
-            src="images/nayae-logo.png"
+            src="images/nayaelogo.png"
             alt="Nayae logo"
             class="logo-image"
           >
