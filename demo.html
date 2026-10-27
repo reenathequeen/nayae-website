@@ -1,15 +1,215 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Request a security technology demonstration from Nayae."><title>Request a Demo | Nayae</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
-<body><div id="site-header"></div><main>
-<section class="page-hero page-hero-compact"><div class="container"><p class="eyebrow">REQUEST A DEMO</p><h1>Explore intelligent<br><span>security technology.</span></h1><p>Tell us what you'd like to explore and the team can follow up if a demonstration is available.</p></div></section>
-<section class="section"><div class="container contact-grid"><div><h2>What would you like to see?</h2><p>Use this form to express interest in a solution.</p>
-<form class="contact-form" id="demo-form" action="https://formspree.io/f/mrppblve" method="POST>
-<label for="demo-name">Full name <span>*</span></label><input id="demo-name" name="name" autocomplete="name" required>
-<label for="demo-email">Business email <span>*</span></label><input id="demo-email" name="email" type="email" autocomplete="email" required>
-<label for="demo-company">Company name <span>*</span></label><input id="demo-company" name="company" autocomplete="organization" required>
-<label for="solution-interest">Solution of interest <span>*</span></label><select id="solution-interest" name="solution" required><option value="">Choose a solution</option><option>AI video surveillance</option><option>Threat detection and analytics</option><option>Pipeline and infrastructure protection</option><option>Remote monitoring</option><option>Access control</option><option>Other / not sure</option></select>
-<label for="demo-message">Message (optional)</label><textarea id="demo-message" name="message" rows="4"></textarea>
-<label class="consent"><input type="checkbox" required> I agree that my information may be used to respond to this request.</label>
-<button class="button button-dark" type="submit">Send Demo Request</button><p id="demo-status" class="form-status" role="status" aria-live="polite"></p>
-</form></div></section>
-</main><div id="site-footer"></div></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Request a security technology demonstration from Nayae.">
+
+    <title>Request a Demo | Nayae</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero page-hero-compact">
+            <div class="container">
+                <p class="eyebrow">REQUEST A DEMO</p>
+
+                <h1>
+                    Explore intelligent<br>
+                    <span>security technology.</span>
+                </h1>
+
+                <p>
+                    Tell us what you'd like to explore and the team can follow up if a demonstration is available.
+                </p>
+            </div>
+        </section>
+
+        <!-- Demo Request Form -->
+        <section class="section">
+            <div class="container contact-grid">
+
+                <div>
+                    <h2>What would you like to see?</h2>
+
+                    <p>Use this form to express interest in a solution.</p>
+
+                    <form
+                        class="contact-form"
+                        id="demo-form"
+                        action="https://formspree.io/f/mrppblve"
+                        method="POST"
+                    >
+                        <label for="demo-name">
+                            Full name <span>*</span>
+                        </label>
+
+                        <input
+                            id="demo-name"
+                            name="name"
+                            type="text"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <label for="demo-email">
+                            Business email <span>*</span>
+                        </label>
+
+                        <input
+                            id="demo-email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <label for="demo-company">
+                            Company name <span>*</span>
+                        </label>
+
+                        <input
+                            id="demo-company"
+                            name="company"
+                            type="text"
+                            autocomplete="organization"
+                            required
+                        >
+
+                        <label for="solution-interest">
+                            Solution of interest <span>*</span>
+                        </label>
+
+                        <select
+                            id="solution-interest"
+                            name="solution"
+                            required
+                        >
+                            <option value="">Choose a solution</option>
+                            <option value="AI video surveillance">AI video surveillance</option>
+                            <option value="Threat detection and analytics">Threat detection and analytics</option>
+                            <option value="Pipeline and infrastructure protection">Pipeline and infrastructure protection</option>
+                            <option value="Remote monitoring">Remote monitoring</option>
+                            <option value="Access control">Access control</option>
+                            <option value="Other / not sure">Other / not sure</option>
+                        </select>
+
+                        <label for="demo-message">
+                            Message (optional)
+                        </label>
+
+                        <textarea
+                            id="demo-message"
+                            name="message"
+                            rows="4"
+                        ></textarea>
+
+                        <label class="consent">
+                            <input
+                                type="checkbox"
+                                name="consent"
+                                value="yes"
+                                required
+                            >
+                            I agree that my information may be used to respond to this request.
+                        </label>
+
+                        <button
+                            class="button button-dark"
+                            id="demo-submit"
+                            type="submit"
+                        >
+                            Send Demo Request
+                        </button>
+
+                        <!-- Success or error message appears here -->
+                        <p
+                            id="demo-status"
+                            class="form-status"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- Demo Form Submission -->
+    <script>
+        const demoForm = document.getElementById("demo-form");
+        const demoStatus = document.getElementById("demo-status");
+        const demoSubmit = document.getElementById("demo-submit");
+
+        demoForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            if (!demoForm.reportValidity()) {
+                return;
+            }
+
+            const originalButtonText = demoSubmit.textContent;
+
+            demoSubmit.disabled = true;
+            demoSubmit.textContent = "Sending...";
+            demoStatus.textContent = "";
+            demoStatus.classList.remove("success", "error");
+
+            try {
+                const response = await fetch(demoForm.action, {
+                    method: "POST",
+                    body: new FormData(demoForm),
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    demoForm.reset();
+
+                    demoStatus.textContent =
+                        "Your demo request has been sent successfully. Thank you for your interest in Nayae!";
+
+                    demoStatus.classList.add("success");
+                } else {
+                    let errorMessage =
+                        "We couldn't send your demo request. Please try again.";
+
+                    try {
+                        const result = await response.json();
+
+                        if (result.errors && result.errors.length > 0) {
+                            errorMessage = result.errors
+                                .map(error => error.message)
+                                .join(" ");
+                        }
+                    } catch (error) {
+                        // Keep the default error message.
+                    }
+
+                    demoStatus.textContent = errorMessage;
+                    demoStatus.classList.add("error");
+                }
+            } catch (error) {
+                demoStatus.textContent =
+                    "A connection error occurred. Please check your internet connection and try again.";
+
+                demoStatus.classList.add("error");
+            } finally {
+                demoSubmit.disabled = false;
+                demoSubmit.textContent = originalButtonText;
+            }
+        });
+    </script>
+</body>
+</html>

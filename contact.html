@@ -1,16 +1,245 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Contact Nayae Consulting & Energy Projects Ltd."><title>Contact Us | Nayae</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
-<body><div id="site-header"></div><main>
-<section class="page-hero page-hero-compact"><div class="container"><p class="eyebrow">CONTACT NAYAE</p><h1>Let's discuss your<br><span>security needs.</span></h1><p>Share a little about your organisation and what you'd like to explore.</p></div></section>
-<section class="section"><div class="container contact-grid"><div><p class="eyebrow">GET IN TOUCH</p><h2>Start a conversation.</h2><p>Use the form to outline your enquiry.</p><div class="contact-info"><div><span class="info-label">Business email</span><p>nayaeconsult@gmail.com</p></div><div><span class="info-label">Telephone</span><p>+1 905-462-7349</p></div><div><span class="info-label"></p></div></div><p class="small-note"></p></div>
-<form class="contact-form" id="contact-form" action="https://formspree.io/f/mrppblve" method="POST">
-<label for="full-name">Full name <span>*</span></label><input id="full-name" name="name" autocomplete="name" required>
-<label for="company">Company name <span>*</span></label><input id="company" name="company" autocomplete="organization" required>
-<label for="email">Business email <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" required>
-<label for="subject">Enquiry type <span>*</span></label><select id="subject" name="subject" required><option value="">Choose an enquiry type</option><option>Security consultation</option><option>AI security solutions</option><option>Pipeline and infrastructure protection</option><option>Partnership enquiry</option><option>Other</option></select>
-<label for="message">How can we help? <span>*</span></label><textarea id="message" name="message" rows="5" required></textarea>
-<label class="consent"><input type="checkbox" required> I agree that my information may be used to respond to this enquiry.</label>
-<button class="button button-dark" type="submit">Submit Enquiry</button><p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-</form></div></section>
-<section class="section section-light"><div class="container cta-inner"><div><h2>Want to see a solution in action?</h2><p>If Nayae offers demonstrations, you can submit a separate demo request.</p></div><a class="button button-gold" href="demo.html">Request a Demo</a></div></section>
-</main><div id="site-footer"></div></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Nayae Consulting & Energy Projects Ltd.">
+
+    <title>Contact Us | Nayae</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero page-hero-compact">
+            <div class="container">
+                <p class="eyebrow">CONTACT NAYAE</p>
+
+                <h1>
+                    Let's discuss your<br>
+                    <span>security needs.</span>
+                </h1>
+
+                <p>
+                    Share a little about your organisation and what you'd like to explore.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container contact-grid">
+
+                <!-- Contact Information -->
+                <div>
+                    <p class="eyebrow">GET IN TOUCH</p>
+
+                    <h2>Start a conversation.</h2>
+
+                    <p>Use the form to outline your enquiry.</p>
+
+                    <div class="contact-info">
+                        <div>
+                            <span class="info-label">Business email</span>
+                            <p>nayaeconsult@gmail.com</p>
+                        </div>
+
+                        <div>
+                            <span class="info-label">Telephone</span>
+                            <p>+1 905-462-7349</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form
+                    class="contact-form"
+                    id="contact-form"
+                    action="https://formspree.io/f/mrppblve"
+                    method="POST"
+                >
+                    <label for="full-name">
+                        Full name <span>*</span>
+                    </label>
+
+                    <input
+                        id="full-name"
+                        name="name"
+                        type="text"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <label for="company">
+                        Company name <span>*</span>
+                    </label>
+
+                    <input
+                        id="company"
+                        name="company"
+                        type="text"
+                        autocomplete="organization"
+                        required
+                    >
+
+                    <label for="email">
+                        Business email <span>*</span>
+                    </label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <label for="subject">
+                        Enquiry type <span>*</span>
+                    </label>
+
+                    <select id="subject" name="subject" required>
+                        <option value="">Choose an enquiry type</option>
+                        <option value="Security consultation">Security consultation</option>
+                        <option value="AI security solutions">AI security solutions</option>
+                        <option value="Pipeline and infrastructure protection">
+                            Pipeline and infrastructure protection
+                        </option>
+                        <option value="Partnership enquiry">Partnership enquiry</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="message">
+                        How can we help? <span>*</span>
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <label class="consent">
+                        <input
+                            type="checkbox"
+                            name="consent"
+                            value="yes"
+                            required
+                        >
+                        I agree that my information may be used to respond to this enquiry.
+                    </label>
+
+                    <button
+                        class="button button-dark"
+                        id="contact-submit"
+                        type="submit"
+                    >
+                        Submit Enquiry
+                    </button>
+
+                    <!-- Submission status appears here -->
+                    <p
+                        id="form-status"
+                        class="form-status"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                </form>
+
+            </div>
+        </section>
+
+        <!-- Demo Call to Action -->
+        <section class="section section-light">
+            <div class="container cta-inner">
+                <div>
+                    <h2>Want to see a solution in action?</h2>
+
+                    <p>
+                        If Nayae offers demonstrations, you can submit a separate demo request.
+                    </p>
+                </div>
+
+                <a class="button button-gold" href="demo.html">
+                    Request a Demo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- Contact Form Submission -->
+    <script>
+        const contactForm = document.getElementById("contact-form");
+        const formStatus = document.getElementById("form-status");
+        const submitButton = document.getElementById("contact-submit");
+
+        contactForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            if (!contactForm.reportValidity()) {
+                return;
+            }
+
+            const originalButtonText = submitButton.textContent;
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+            formStatus.textContent = "";
+            formStatus.classList.remove("success", "error");
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: "POST",
+                    body: new FormData(contactForm),
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    contactForm.reset();
+
+                    formStatus.textContent =
+                        "Your enquiry has been sent successfully. Thank you for contacting Nayae!";
+
+                    formStatus.classList.add("success");
+                } else {
+                    let errorMessage =
+                        "We couldn't send your enquiry. Please try again.";
+
+                    try {
+                        const result = await response.json();
+
+                        if (result.errors && result.errors.length > 0) {
+                            errorMessage = result.errors
+                                .map(error => error.message)
+                                .join(" ");
+                        }
+                    } catch (error) {
+                        // Use the default error message if no details are available.
+                    }
+
+                    formStatus.textContent = errorMessage;
+                    formStatus.classList.add("error");
+                }
+            } catch (error) {
+                formStatus.textContent =
+                    "A connection error occurred. Please check your internet connection and try again.";
+
+                formStatus.classList.add("error");
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        });
+    </script>
+</body>
+</html>
